@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewChosenCardActivity"
+    android:background="#2F195F">
+
+    <TextView
+        android:id="@+id/roundTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/titleTextView"
+        android:fontFamily="@font/josefin_sans_light_italic"
+        android:textColor="#ffffff"
+        android:text="Round 1"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+
+        />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/roundTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chosenCard"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:textColor="#ffffff"
+        android:text="You Selected:"
+        android:textSize="40sp"
+        android:layout_margin="20dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chosenCard"
+        android:layout_width="match_parent"
+        android:minHeight="500dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/continueButton">
+
+        <TextView
+            android:id="@+id/chosenCardTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/infoLayout"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="40sp"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Coronavirus (Covid19)"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintVertical_bias="0.1"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/infoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/chosenCardTitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_chainStyle="spread">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/descLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/forLayout"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:id="@+id/chosenCardDescTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="30sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    app:layout_constraintBottom_toTopOf="@id/chosenCardDescBody"
+                    android:text="Description"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/chosenCardDescBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_sans"
+                    android:textColor="#ffffff"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chosenCardDescTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/forLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descLayout"
+                app:layout_constraintBottom_toTopOf="@id/againstLayout"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/chosenCardForTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/chosenCardForBody"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:textColor="#ffffff"
+                    android:text="For"/>
+
+                <TextView
+                    android:id="@+id/chosenCardForBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/chosenCardForTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/josefin_sans"
+                    android:textColor="#ffffff"
+                    android:text="Coronavirus is a natural disease that occured in the wetmarkets of wuhan, China."
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/againstLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/forLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/chosenCardAgainstTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/chosenCardAgainstBody"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:textColor="#ffffff"
+                    android:text="Against"/>
+
+                <TextView
+                    android:id="@+id/chosenCardAgainstBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/chosenCardAgainstTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/josefin_sans"
+                    android:textColor="#ffffff"
+                    android:text="Coronavirus is a man-made virus made in a laboratory."
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="continue"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/chosenCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="40dp"
+        android:background="@drawable/rounded_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

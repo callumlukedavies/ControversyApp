@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.controversyapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ChooseTopicActivity"></activity>
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeclareOppositionPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BeginRoundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChoosingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OnboardingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/OnboardingScreen" />
+        <activity
+            android:name=".ViewChosenCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AnnounceWinnersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DisplayTeamsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ScienceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MiscActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReligionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PoliticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SocietyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SelectRoundWinnerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ArgumentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SelectCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChooseCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NameEntryActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".CreateAccountActivity" />
+        <activity
+            android:name=".AltCategoriesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreatePartyActivity"
+            android:label="@string/title_activity_create_party" />
+        <activity android:name=".SignInActivity" />
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

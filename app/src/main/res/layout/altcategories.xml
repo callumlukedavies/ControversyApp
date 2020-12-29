@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseCategoryActivity"
+    android:background="#2F195F">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/scrollView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:layout_marginTop="150dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/selectCardTitle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/josefin_sans"
+                    android:text="Choose a Category"
+                    android:textSize="40sp"
+                    android:textColor="#ffffff"
+                    app:layout_constraintEnd_toStartOf="@+id/roundTextView"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/roundTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:fontFamily="@font/josefin_sans_light_italic"
+                    android:text="Round 1"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/selectCardTitle"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/topLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bottomLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingBottom="150dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/societyButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/religionButton"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="#2700E9"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="30dp"
+                        android:theme="@style/Widget.MaterialComponents.CardView"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:background="@drawable/ic_society_art">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Society"
+                                    android:textSize="40sp"
+                                    android:textColor="#ffffff"
+                                    android:fontFamily="@font/josefin_sans_bold"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/societyCategoryDescription"
+                                    android:textSize="14sp"
+                                    android:textColor="#ffffff"
+                                    android:fontFamily="@font/josefin_sans"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="150dp"
+                                    />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="60dp"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/religionButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/societyButton"
+                        app:layout_constraintBottom_toTopOf="@id/scienceButton"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="#7353BA"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="30dp"
+                        android:theme="@style/Widget.MaterialComponents.CardView"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:background="@drawable/ic_religion_art">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Religion"
+                                    android:textSize="40sp"
+                                    android:textColor="#ffffff"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/josefin_sans_bold"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#ffffff"
+                                    android:fontFamily="@font/josefin_sans"
+                                    android:text="@string/religionCategoryDescription"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="150dp"
+                                    />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="60dp"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scienceButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/religionButton"
+                        app:layout_constraintBottom_toTopOf="@id/politicsButton"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="#7353BA"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="30dp"
+                        android:theme="@style/Widget.MaterialComponents.CardView"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:background="@drawable/ic_science_art"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Science"
+                                    android:textSize="40sp"
+                                    android:textColor="#ffffff"
+                                    android:fontFamily="@font/josefin_sans_bold"
+                                    android:layout_marginLeft="10dp"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#ffffff"
+                                    android:fontFamily="@font/josefin_sans"
+                                    android:text="@string/scienceCategoryDescription"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="165dp"
+                                    />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="60dp"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/politicsButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/scienceButton"
+                        app:layout_constraintBottom_toTopOf="@+id/historyButton"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="#7353BA"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="30dp"
+                        android:theme="@style/Widget.MaterialComponents.CardView"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:background="@drawable/ic_politics_art">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Politics"
+                                    android:textSize="40sp"
+                                    android:textColor="#ffffff"
+                                    android:fontFamily="@font/josefin_sans_bold"
+                                    android:layout_marginLeft="10dp"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#ffffff"
+                                    android:fontFamily="@font/josefin_sans"
+                                    android:text="@string/politicsCategoryDescription"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="150dp"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="50dp"
+                                />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/historyButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/politicsButton"
+                        app:layout_constraintBottom_toTopOf="@id/miscButton"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="#7353BA"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="30dp"
+                        android:theme="@style/Widget.MaterialComponents.CardView"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:background="@drawable/ic_history_art">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="History"
+                                    android:textSize="40sp"
+                                    android:textColor="#ffffff"
+                                    android:fontFamily="@font/josefin_sans_bold"
+                                    android:layout_marginLeft="10dp"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/historyCategoryDescription"
+                                    android:textSize="14sp"
+                                    android:textColor="#ffffff"
+                                    android:fontFamily="@font/josefin_sans"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="150dp"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="60dp"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/miscButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/historyButton"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="#7353BA"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="30dp"
+                        android:theme="@style/Widget.MaterialComponents.CardView"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="@drawable/ic_misc_art"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Misc"
+                                    android:textSize="40sp"
+                                    android:textColor="#ffffff"
+                                    android:fontFamily="@font/josefin_sans_bold"
+                                    android:layout_marginLeft="10dp"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#ffffff"
+                                    android:fontFamily="@font/josefin_sans"
+                                    android:text="@string/miscCategoryDescription"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="150dp"
+                                    />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="60dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

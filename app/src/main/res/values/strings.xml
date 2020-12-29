@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">ControversyApp</string>
+    <string name="create_button">Create an Account</string>
+    <string name="login_button">Sign In</string>
+    <string name="login">Log In</string>
+    <string name="main_activity_intro">The controversial, argument based game.</string>
+    <string name="intro">The controversial, argument based game.</string>
+    <string name="title_activity_create_party">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="create_account_button">Create Account</string>
+    <string name="chooseTopicText1">, you must now declare your stance on each topic. </string>
+    <string name="chooseTopicText2">, one of you must either take an opposition on a topic or forfeit.</string>
+    <string name="intervalOne">Each player will now get 2 minutes to
+        outline his/her argument to their teammates.</string>
+    <string name="intervalTwo">, you will now get 2 minutes to present your argument to
+        your opponent and the spectators. Go!</string>
+    <string name="intervalThree">, you will now get 2 minutes to present your argument
+        to your opponent and the spectators. Go!</string>
+    <string name="intervalFour">, you will now get 5 minutes to debate the given
+        issue. Commence!</string>
+
+    <string name="instructionOne">Discuss your arguments with your teammates.</string>
+    <string name="instructionTwo">, present your argument.</string>
+    <string name="instructionThree">, present your argument.</string>
+    <string name="instructionFour">, the time to debate has begun.
+        Face your opponents and convince them of your position!</string>
+    <string name="instructionFive">Spectators and team mates, you will now get the opportunity to
+        ask questions of both players. Once you have no more questions, press "ready" to vote.</string>
+    <string name="go">Go!</string>
+
+    <string name="choosingActivityTitle">The Choosing Team</string>
+    <string name="choosingActivityDesc">Choose which team will choose first. The choosing team
+        has the advantage of choosing a category and their stance on each topic in the category.</string>
+
+    <string name="beginRoundActivityTitle">Round One</string>
+    <string name="beginRoundActivityDesc">will begin. Please select this rounds player:</string>
+
+    <string name="chooseOppositionTextOne">Please nominate a player from the </string>
+    <string name="chooseOppositionTextTwo"> to take the opposition.</string>
+
+    <string name="societyCategoryDescription">Veganism. University Degrees. Transgenderism in Sports. Cancel Culture. Racism. TikTok.</string>
+    <string name="scienceCategoryDescription">Corona Virus. Cyborgs. Vaccines. Secret Cures. Evolution. Flat Earth.</string>
+    <string name="historyCategoryDescription">Pyramids. Nazis. 9/11. Moon Landing. JFK. Tiananmen Square.</string>
+    <string name="religionCategoryDescription">Scientology. Circumcision. Priests. Free will. Islamaphobia. Anti-Zionism.</string>
+    <string name="politicsCategoryDescription">The Monarchy. Weed. The Conservative Party. Brexit. Capitalism. Gun Control.</string>
+    <string name="miscCategoryDescription">Zoos. The Illuminati. Milk. Dogs vs Cats. Free Education. Cosmetic Surgery.</string>
+</resources>

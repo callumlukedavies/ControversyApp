@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayTeamsActivity"
+    android:background="#2F195F">
+
+    <TextView
+        android:id="@+id/displayTeamsTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teams"
+        android:textSize="40sp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/josefin_sans_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/teamContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/teamContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/displayTeamsTextView1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/specTeamContainer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/redTeamContainer"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/blueTeamContainer"
+            android:background="@drawable/rounded_textview"
+            android:padding="10dp"
+            app:layout_constraintHorizontal_chainStyle="spread">
+
+            <TextView
+                android:id="@+id/teamRedTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team Red"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textSize="30sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/redNamesTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/redNamesTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/josefin_sans"
+                app:layout_constraintTop_toBottomOf="@id/teamRedTitleTextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/blueTeamContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_textview"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/redTeamContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/teamBlueTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team Blue"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textSize="30sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/blueNamesTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/blueNamesTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teamBlueTitleTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/josefin_sans"
+                android:textAlignment="center"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/specTeamContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/teamContainer"
+        app:layout_constraintBottom_toTopOf="@+id/continueButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/rounded_textview"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/specTeamTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Spectators"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/josefin_sans_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/specNamesTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            />
+
+
+        <TextView
+            android:id="@+id/specNamesTextView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/specTeamTextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/josefin_sans"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/specTeamContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="40dp"
+        android:background="@drawable/rounded_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
